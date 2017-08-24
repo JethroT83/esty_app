@@ -6,10 +6,11 @@ Requirements
 Note: I will be working on remove this dependencies
 
 cURL devel:
-Ubuntu: sudo apt-get install libcurl4-dev
-Fedora/CentOS: sudo yum install curl-devel
+    Ubuntu: sudo apt-get install libcurl4-dev
+    Fedora/CentOS: sudo yum install curl-devel
+    
 OAuth pecl package:
-sudo pecl install oauth
+    sudo pecl install oauth
 And then add the line extension=oauth.so to your php.ini
 
 
