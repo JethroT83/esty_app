@@ -1,12 +1,10 @@
 <?php
 
-
 	#Run AutoLoad
-	#require(__DIR__ . '/app/autoload.php');
 	require(__DIR__.'/vendor/autoload.php');
-	
-	#Include Database Credentials
-	#require(__DIR__ . '/app/database.php');
+
+	#Get OAUTH Credentials
+	define("AUTH", require_once(__DIR__."/oauth-config.php"));
 
 	############### To Run ########################
 
@@ -19,19 +17,33 @@
 
 
 	################ OAUTH LOGIN ####################
-		$auth = require_once(__DIR__."/oauth-config.php");
 
-		$client = new Etsy\EtsyClient($auth['consumer_key'], $auth['consumer_secret']);
-		$client->authorize($auth['access_token'], $auth['access_token_secret']);
-
-		$api = new Etsy\EtsyApi($client);
-
-		print_r($api->getUser(array('params' => array('user_id' => '__SELF__'))));
+		$M = new \app\model();
+		$M::login();
 
 
+		#$P = new \view\topSeller();
+		#$P->run();
 
-	################  TEST         ##################
-	//new \app\test();
+		#print_r($api->getUser(array('params' => array('user_id' => '__SELF__'))));
 
 
-	################  Running Code ##################
+	################  HTML  ##################
+
+
+?>
+<html>
+	</header>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	</header>
+	<body>
+
+
+<?php
+
+		$V = new \view\topSeller();
+		echo $V->display();
+
+?>
+	</body>
+</html>
