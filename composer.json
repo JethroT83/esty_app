@@ -1,0 +1,18 @@
+{
+    "name": "jedlynch/etsyapp",
+    "description": "Get top 5 sold items for 10 stores",
+    "authors": [
+        {
+            "name": "Jed Lynch",
+            "email": "jedlynch@gmail.com"
+        }
+    ],
+    "require": {
+        "inakiabt/etsy-php": "^0.10.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    }
+}
