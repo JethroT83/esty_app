@@ -12,7 +12,7 @@ cURL devel:
     
 OAuth pecl package:
 
-    sudo pecl install oauth
+    sudo apt-get install php-oauth
     
 And then add the line extension=oauth.so to your php.ini
 
