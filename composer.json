@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "inakiabt/etsy-php": "^0.10.1"
+        "inakiabt/etsy-php": "^0.10.1",
+        "lusitanian/oauth": "^0.8.10"
     },
     "autoload": {
         "psr-4": {
