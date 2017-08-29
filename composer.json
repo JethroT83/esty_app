@@ -8,14 +8,27 @@
         }
     ],
     "require": {
-        "inakiabt/etsy-php": "^0.10.1",
-        "lusitanian/oauth": "^0.8.10"
+        "jedlynch/etsy-php": "0.10.2"
     },
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "jedlynch/etsy-php",
+            "version": "0.10.2",
+            "type":"libaray",
+            "source": {
+                "url": "https://github.com/JethroT83/etsy-php",
+                "type": "git",
+                "reference": "origin/master"
+            }
+        }
+    }],
     "autoload": {
         "psr-4": {
             "app\\": "app/",
             "controller\\": "controller/",
-            "view\\": "view/"
+            "view\\": "view/",
+            "Etsy\\": "vendor/jedlynch/etsy-php/src/Etsy/"
         }
     }
 }

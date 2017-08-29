@@ -12,8 +12,8 @@ namespace controller{
 									"paperandgumption",
 									"ModParty",
 									"Everfitte",
-									"One Source Supply",
-									"Smart Parts Crafts");
+									"AnniePlansPrintables",
+									"Thevelvetacorn");
 
 		public function get(){
 
@@ -24,10 +24,15 @@ namespace controller{
 				$params = array('shop_name'=>$topSeller,'limit'=>1);
 				$shops = $P->getShops($params);
 
-				$shopID = $shops[0]['shop_id'];
-				$listings = $P->getShopListings($shopID);
+				if(isset($shops[0]['shop_id'])){
 
-				$result[$topSeller] = $listings;
+					$shopID = $shops[0]['shop_id'];
+					$listings = $P->getShopListings($shopID);
+
+					$result[$topSeller] = $listings;
+				}else{
+					die("store ".$topSeller ." does not exist.");
+				}
 
 			}
 
