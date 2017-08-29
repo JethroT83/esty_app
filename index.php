@@ -22,12 +22,6 @@
 		$M::login();
 
 
-		#$P = new \view\topSeller();
-		#$P->run();
-
-		#print_r($api->getUser(array('params' => array('user_id' => '__SELF__'))));
-
-
 	################  HTML  ##################
 
 
